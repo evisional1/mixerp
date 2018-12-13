@@ -1,0 +1,35 @@
+﻿@model dynamic
+
+@{
+    ViewBag.Title = "Content List";
+    Layout = ViewBag.Layout;
+}
+
+<script>
+    var scrudFactory = new Object();
+
+    scrudFactory.title = "Contents";
+
+    scrudFactory.viewAPI = "/api/website/content";
+    scrudFactory.viewTableName = "website.contents";
+
+    scrudFactory.formAPI = "/api/website/content";
+    scrudFactory.formTableName = "website.contents";
+
+    scrudFactory.disabledOnEdit = ["AuthorId"];
+    scrudFactory.excludedColumns = ["AuditUserId", "AuditTs", "Contents", "Markdown"];
+
+    scrudFactory.allowDelete = true;
+    scrudFactory.allowEdit = true;
+    scrudFactory.addNewUrl = "contents/manage";
+    scrudFactory.editUrl = "contents/manage?ContentId=";
+
+    scrudFactory.card = {
+        header: "Title",
+        meta: "Alias",
+        description: "SeoDescription"
+    };    
+</script>
+
+
+<div data-ng-include="'/ScrudFactory/View.html'"></div>
