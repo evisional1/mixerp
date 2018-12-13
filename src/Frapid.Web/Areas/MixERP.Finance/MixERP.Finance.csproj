@@ -60,10 +60,6 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\bin\Frapid.Configuration.dll</HintPath>
     </Reference>
-    <Reference Include="Frapid.Dashboard, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\bin\Frapid.Dashboard.dll</HintPath>
-    </Reference>
     <Reference Include="Frapid.DataAccess, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\bin\Frapid.DataAccess.dll</HintPath>
@@ -315,6 +311,10 @@
     <ProjectReference Include="..\..\..\Libraries\Frapid.i18n\Frapid.i18n.csproj">
       <Project>{88dfdf57-a52b-4d71-a0c4-bef1a3839506}</Project>
       <Name>Frapid.i18n</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Frapid.Dashboard\Frapid.Dashboard.csproj">
+      <Project>{bc0e7e01-7ef5-4a85-9bf1-2666c99fba1c}</Project>
+      <Name>Frapid.Dashboard</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

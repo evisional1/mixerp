@@ -32,7 +32,8 @@ namespace Frapid.Dashboard.Controllers
             }
 
             var images = this.GetImages(directory, resourceDirectory);
-            return this.Ok(images);
+            //return this.Ok(images);
+            return this.Ok(new List<string>() { @"/dashboard/resources/backgrounds/background1.jpg" } );
         }
 
         public static IEnumerable<T> Shuffle<T>(IEnumerable<T> source, Random generator = null)
@@ -57,6 +58,7 @@ namespace Frapid.Dashboard.Controllers
             var directory = new DirectoryInfo(path);
             var files = directory.EnumerateFiles().Where(f => imageFormats.Contains(f.Extension.ToLower()));
             return Shuffle(files.Select(file => "/dashboard/resources/backgrounds/" + file.Name));
+            
         }
     }
 }
